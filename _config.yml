@@ -17,7 +17,7 @@ cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: false
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -39,11 +39,11 @@ custom_file_path:
 # See: https://theme-next.org/docs/getting-started/
 # ---------------------------------------------------------------
 
-favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+favicon: # 改动
+  small: /images/favicon.ico
+  medium: /images/favicon.ico
+  apple_touch_icon: /images/favicon.ico
+  safari_pinned_tab: /images/favicon.ico
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -53,7 +53,7 @@ rss:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2017
 
   # Icon between year and copyright info.
   icon:
@@ -61,7 +61,7 @@ footer:
     # `heart` is recommended with animation in red (#ff0000).
     name: user
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
     color: "#808080"
 
@@ -70,15 +70,15 @@ footer:
 
   powered:
     # Hexo link (Powered by Hexo).
-    enable: true
+    enable: false
     # Version info of Hexo after Hexo link (vX.X.X).
-    version: true
+    version: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
 
   # Beian ICP and gongan information for Chinese users. See: http://www.beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
@@ -157,29 +157,29 @@ baidu_push: false
 # External url should start with http:// or https://
 menu:
   home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
-# Enable / Disable menu icons / item badges.
+# Enable / Disable menu icons / item badges. 改动 显示菜单栏右边数量
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
 
-# Schemes
-scheme: Muse
+# Schemes 改动
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -196,8 +196,8 @@ site_state: true
 # Value before `||` delimiter is the target permalink.
 # Value after `||` delimiter is the name of Font Awesome icon. If icon (with or without delimiter) is not specified, globe icon will be loaded.
 social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  GitHub: https://github.com/LiWenGu || github
+  E-Mail: mailto:liwenguang_dev@163.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -210,8 +210,8 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
-  transition: false
+  icons_only: true
+  transition: true
 
 # Blog rolls
 links_settings:
@@ -222,34 +222,35 @@ links_settings:
 
 links:
   #Title: http://example.com
+  唐亚峰 | battcn: https://blog.battcn.com/
 
 # Sidebar Avatar
-avatar:
+avatar: # 改动
   # In theme directory (source/images): /images/avatar.gif
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: #/images/avatar.gif
+  url: /images/avatar2.jpg
   # If true, the avatar would be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar would be rotated with the cursor.
   rotated: false
 
 # Table Of Contents in the Sidebar
-toc:
+toc: # 改动
   enable: true
   # Automatically add list number to toc.
-  number: true
+  number: false
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  wrap: true
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-  expand_all: false
+  expand_all: true
   # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front-matter.
   max_depth: 6
 
 sidebar:
   # Sidebar Position.
-  position: left
-  #position: right
+  #position: left
+  position: right
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
@@ -287,17 +288,17 @@ chat:
 scroll_to_more: true
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Automatically excerpt (Not recommend).
 # Use <!-- more --> in the post to control excerpt accurately.
-auto_excerpt:
-  enable: false
+auto_excerpt: 
+  enable: true # 改动 自动生成文章概要，和阅读全文按钮一起使用
   length: 150
 
 # Read more button
 # If true, the read more button would be displayed in excerpt section.
-read_more_btn: true
+read_more_btn: true # 改动 增加阅读全文按钮
 
 # Post meta display settings
 post_meta:
@@ -308,7 +309,7 @@ post_meta:
     another_day: true
   categories: true
 
-# Post wordcount display settings
+# Post wordcount display settings 改动 依赖主config 字数统计
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
   separated_meta: true
@@ -318,7 +319,7 @@ symbols_count_time:
   wpm: 275
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+tag_icon: true # 改动 标签不是 # 而是符号
 
 # Wechat Subscriber
 wechat_subscriber:
@@ -341,22 +342,22 @@ reward:
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
-related_posts:
-  enable: false
-  title: # Custom header, leave empty to use the default one
+related_posts: # 改动 相关文章
+  enable: true
+  title: 相关文章 # Custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
     #PPMixingRate: 0.0
-    #isDate: false
+    isDate: true
     #isImage: false
     #isExcerpt: false
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
-  enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
+  enable: true
+  url: https://github.com/LiWenGu/liwengu.github.io/edit/source/source/ # Link for view source.
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
 
 
@@ -420,25 +421,25 @@ custom_scrollbar: false
 # Custom Logo (Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
 
-codeblock:
+codeblock: # 改动 代码块
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: normal
+  highlight_theme: night
   # Add copy button on codeblock
-  copy_button:
-    enable: false
+  copy_button: 
+    enable: true 
     # Show text copy result.
-    show_result: false
+    show_result: true
     # Available values: default | flat | mac
-    style:
+    style: mac
 
-back2top:
+back2top: # 改动
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -477,7 +478,7 @@ github_banner:
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 
-font:
+font: # 改动 修改字体为 Monda
   # Use custom fonts families or not.
   # Depended options: `external` and `family`.
   enable: false
@@ -493,30 +494,28 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Lato
-    size:
+    family: Menlo
+    size: 0.7
 
   # Font settings for site title (.site-title).
   title:
     external: true
-    family:
-    size:
+    family: Monda
 
   # Font settings for headlines (<h1> to <h6>).
   headings:
     external: true
-    family:
-    size:
+    family: Monda
 
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family:
+    family: Monda
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: Menlo
 
 
 # ---------------------------------------------------------------
@@ -556,7 +555,7 @@ pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox
-fancybox: false
+fancybox: true
 
 # A JavaScript library for zooming images like Medium.
 # Do not enable both `fancybox` and `mediumzoom`.
@@ -670,21 +669,21 @@ valine:
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 livere_uid: # <your_uid>
 
-# Gitalk
+# Gitalk 改动 使用 gittalk 评论
 # Demo: https://gitalk.github.io
 # For more information: https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
-  github_id: # GitHub repo owner
-  repo: # Repository name to store issues
-  client_id: # GitHub Application Client ID
-  client_secret: # GitHub Application Client Secret
-  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  enable: true
+  github_id: LiWenGu # GitHub repo owner
+  repo: liwengu.github.io # Repository name to store issues
+  client_id: 9c95a1f557f59b539162 # GitHub Application Client ID
+  client_secret: 8c2aafea232c2f5de7d16e23667b703b2e0c4215 # GitHub Application Client Secret
+  admin_user: LiWenGu # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
-  language:
+  language: zh-CN
 
 
 # ---------------------------------------------------------------
@@ -736,16 +735,16 @@ add_this_id:
 # See: https://theme-next.org/docs/third-party-services/statistics-and-analytics
 # ---------------------------------------------------------------
 
-# Baidu Analytics
-baidu_analytics: # <app_id>
+# Baidu Analytics 改动 百度统计
+baidu_analytics: cfa1bf8fa457ee5150093dc7c8761541 # <app_id>
 
 # Growingio Analytics
 # Copyright 2015-2018 GrowingIO, Inc. More info available at https://www.growingio.com
 growingio_analytics: # <project_id>
 
-# Google Analytics
+# Google Analytics 改动 谷歌统计
 google_analytics:
-  tracking_id: # <app_id>
+  tracking_id: UA-146913835-1 # <app_id>
   localhost_ignored: true
 
 # CNZZ count
@@ -779,7 +778,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true # 改动 本地计算数量
   total_visitors: true
   total_visitors_icon: user
   total_views: true
@@ -787,8 +786,8 @@ busuanzi_count:
   post_views: true
   post_views_icon: eye
 
-# Tencent analytics
-tencent_analytics: # <app_id>
+# Tencent analytics 改动 腾讯统计
+tencent_analytics: 66468392 # <app_id>
 
 # Tencent MTA
 tencent_mta: # <app_id>
@@ -810,10 +809,10 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
-# Local Search
+# Local Search 改动 设置本地搜索
 # Dependencies: https://github.com/wzpan/hexo-generator-search
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -920,12 +919,12 @@ motion:
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
 # For more information: https://github.com/HubSpot/pace
-pace:
-  enable: false
+pace: # 改动 显示加载条，需要同时设置 pace css 地址
+  enable: true
   # Themes list:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
-  theme: minimal
+  theme: flash
 
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three
@@ -1005,14 +1004,14 @@ vendors:
   # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
   pjax:
 
-  # FancyBox
+  # FancyBox 改动 图片浏览增加
   # Example:
   # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
   # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
   # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
-  jquery:
-  fancybox:
-  fancybox_css:
+  jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
+  fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
+  fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
 
   # Medium-zoom
   # Example:
@@ -1085,13 +1084,13 @@ vendors:
   velocity_ui:
 
   # Internal version: 1.0.2
-  # Example:
+  # Example: 改动，加载条动画的js请求路径
   # pace: //cdn.jsdelivr.net/npm/pace-js@1/pace.min.js
   # pace: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
   # pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css
   # pace_css: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
-  pace:
-  pace_css:
+  pace: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
+  pace_css: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
 
   # Internal version: 1.0.0
   # Example:
