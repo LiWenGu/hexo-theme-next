@@ -495,7 +495,7 @@ font: # 改动 修改字体为 Monda
   global:
     external: true
     family: Menlo
-    size: 0.7
+    size: 0.9
 
   # Font settings for site title (.site-title).
   title:
