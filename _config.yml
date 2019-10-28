@@ -140,31 +140,6 @@ menu_settings:
 
 
 # ---------------------------------------------------------------
-# Menu Settings
-# ---------------------------------------------------------------
-
-# Usage: `Key: /link/ || icon`
-# Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-senstive.
-# Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
-# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
-# External url should start with http:// or https://
-menu:
-  home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  archives: /archives/ || archive
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
-
-# Enable / Disable menu icons / item badges. 改动 显示菜单栏右边数量
-menu_settings:
-  icons: true
-  badges: true
-
-
-# ---------------------------------------------------------------
 # Sidebar Settings
 # See: https://theme-next.org/docs/theme-settings/sidebar
 # ---------------------------------------------------------------
@@ -445,7 +420,7 @@ github_banner:
 font: # 改动 修改字体为 Monda
   # Use custom fonts families or not.
   # Depended options: `external` and `family`.
-  enable: false
+  enable: true
 
   # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
   host:
@@ -459,7 +434,7 @@ font: # 改动 修改字体为 Monda
   global:
     external: true
     family: Menlo
-    size: 0.9
+    size: 0.85
 
   # Font settings for site title (.site-title).
   title:
