@@ -188,6 +188,7 @@ social:
   #Instagram: https://instagram.com/yourname || fab fa-instagram
   #Skype: skype:yourname?call|chat || fab fa-skype
   rss: /atom.xml || fa fa-rss
+  语雀: https://www.yuque.com/liwenguang/learn || fab 
 
 social_icons:
   enable: true
